@@ -1,10 +1,8 @@
 import './PostInfo.scss';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
-// Спойлер: сюда нужно будет импортировать UserInfo и CommentList
 
 export const PostInfo = ({ post }) => {
-  // Вытаскиваем нужные свойства из объекта post для удобства
   const { title, body, user, comments } = post;
 
   return (

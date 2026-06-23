@@ -1,10 +1,13 @@
+import { Fragment } from 'react';
 import './CommentList.scss';
-import { CommentInfo } from '../CommentInfo'; // Импортируем компонент отдельного комментария
+import { CommentInfo } from '../CommentInfo';
 
 export const CommentList = ({ comments }) => (
   <div className="CommentList">
     {comments.map(comment => (
-      <CommentInfo key={comment.id} comment={comment} />
+      <Fragment key={comment.id}>
+        <CommentInfo comment={comment} />
+      </Fragment>
     ))}
   </div>
 );
